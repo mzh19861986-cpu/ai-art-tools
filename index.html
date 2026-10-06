@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,19 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        nav { padding: 1.5rem 0; border-bottom: 1px solid #eee; margin-bottom: 4rem; }
+        nav { padding: 1.5rem 0; border-bottom: 1px solid #eee; margin-bottom: 3rem; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; text-decoration: none; }
-        .hero { text-align: center; padding: 6rem 0; }
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-        .hero p { font-size: 1.25rem; color: #666; max-width: 600px; margin: 0 auto 3rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 4rem 0; }
-        .card { padding: 2rem; border: 1px solid #eee; border-radius: 12px; transition: all 0.2s; }
+        .hero { text-align: center; padding: 4rem 0 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .card { padding: 1.5rem; border: 1px solid #eee; border-radius: 12px; transition: all 0.2s; }
         .card:hover { border-color: #1a1a1a; transform: translateY(-2px); }
-        .card h3 { font-size: 1.25rem; margin-bottom: 1rem; }
-        .card p { color: #666; }
-        footer { padding: 3rem 0; border-top: 1px solid #eee; text-align: center; color: #999; margin-top: 6rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .card .tag { display: inline-block; padding: 0.2rem 0.6rem; background: #f0f0f0; border-radius: 12px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .card p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        footer { padding: 3rem 0; border-top: 1px solid #eee; text-align: center; color: #999; margin-top: 4rem; }
     </style>
 </head>
 <body>
@@ -29,7 +29,8 @@
         <div class="container">
             <a href="/" class="logo">🎨 AI Art Tools</a>
             <div>
-                <a href="/about" style="color: #666; text-decoration: none;">About</a>
+                <a href="/" style="margin-right: 1.5rem; color: #666; text-decoration: none;">Home</a>
+                <a href="/about" style="color: #666; text-decoration: none;">关于</a>
             </div>
         </div>
     </nav>
@@ -39,14 +40,63 @@
             <p>Best AI art and image generation tools</p>
         </div>
         <div class="grid">
-            <div class="card"><h3>🔥 Popular</h3><p>Most popular tools and resources</p></div>
-            <div class="card"><h3>🆕 Latest</h3><p>Updated daily by AI agents</p></div>
-            <div class="card"><h3>📊 Reviews</h3><p>Honest reviews and comparisons</p></div>
+            <div class="card">
+                <h3>Midjourney</h3>
+                <div>
+                    <span class="tag">付费</span>
+                    <span class="tag">高质量</span>
+                    <span class="tag">艺术</span>
+                </div>
+                <p>最强AI绘画工具，艺术效果顶级</p>
+            </div>
+            <div class="card">
+                <h3>DALL-E 3</h3>
+                <div>
+                    <span class="tag">免费额度</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="tag">易上手</span>
+                </div>
+                <p>OpenAI出品，文字理解能力强</p>
+            </div>
+            <div class="card">
+                <h3>Stable Diffusion</h3>
+                <div>
+                    <span class="tag">开源</span>
+                    <span class="tag">免费</span>
+                    <span class="tag">本地部署</span>
+                </div>
+                <p>开源免费，可本地部署，自由度高</p>
+            </div>
+            <div class="card">
+                <h3>Leonardo AI</h3>
+                <div>
+                    <span class="tag">免费额度</span>
+                    <span class="tag">游戏美术</span>
+                </div>
+                <p>游戏美术风格强，适合游戏开发者</p>
+            </div>
+            <div class="card">
+                <h3>MidJourney</h3>
+                <div>
+                    <span class="tag">付费</span>
+                    <span class="tag">真实感</span>
+                </div>
+                <p>照片级真实感，产品摄影神器</p>
+            </div>
+            <div class="card">
+                <h3>Ideogram</h3>
+                <div>
+                    <span class="tag">免费额度</span>
+                    <span class="tag">文字设计</span>
+                </div>
+                <p>文字渲染能力强，做海报Logo神器</p>
+            </div>
+
         </div>
     </div>
     <footer>
         <div class="container">
-            <p>© 2026 AI Art Tools - Maintained by AI Agent Cluster</p>
+            <p>© 2026 AI Art Tools - 由 AI 智能集群自动维护更新</p>
         </div>
     </footer>
 </body>
