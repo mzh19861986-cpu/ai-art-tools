@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Diffusion - 详细介绍 | AI Art Tools</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
+        nav a { color: #6b7280; text-decoration: none; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
+    <div class="container">
+        <h1>Stable Diffusion</h1>
+        <div class="content">
+            这是一份关于 **Stable Diffusion (SD)** 的详细介绍。为了确保客观与实用，本文将基于其技术原理、生态现状及实际应用场景进行说明。<br><br>---<br><br>### 1. 这个工具是什么？<br><br>**Stable Diffusion** 是由 **Stability AI** 公司主导开发的一款**开源**的文本到图像生成模型（Text-to-Image Model）。<br><br>- **技术本质**：它是一种基于**扩散模型（Diffusion Model）** 的深度学习模型。简单来说，它通过“去噪”过程工作：先给一张纯噪声图，然后模型根据你的文字提示词（Prompt），一步步去除噪声，最终“画”出符合描述的图像。<br>- **核心特点**：与 Midjourney 或 DALL-E 3 等闭源工具不同，Stable Diffusion 的**模型权重是公开的**。这意味着任何人都可以下载并在自己的电脑上运行，也可以基于它训练自己的专属模型。<br><br>### 2. 适合谁用？<br><br>Stable Diffusion 的适用人群非常广泛，但不同人群的体验差异巨大：<br><br>- **AI 绘画深度爱好者/艺术家**：需要精细控制画面细节（如姿势、构图、光影），追求极致自由度。<br>- **设计师/插画师**：用于概念草图、素材生成、风格探索，甚至作为工作流的一部分。<br>- **开发者/程序员**：需要将 AI 绘画集成到自己的应用中，或研究模型微调（LoRA、ControlNet）。<br>- **硬件发烧友**：拥有高性能显卡（NVIDIA），喜欢折腾本地部署和参数调试。<br>- **普通用户（需谨慎）**：如果你只是想“输入一句话就出神图”，且不想折腾电脑配置，Stable Diffusion 的学习曲线会比较陡峭，可能 Midjourney 或国内套壳网站更合适。<br><br>### 3. 核心功能<br><br>Stable Diffusion 的强大不仅在于模型本身，更在于其庞大的**插件生态**：<br><br>1.  **文生图 (Text-to-Image)**：最基础功能，输入提示词生成图像。<br>2.  **图生图 (Image-to-Image)**：上传一张草图或照片，AI 在此基础上进行重绘或风格转换。<br>3.  **ControlNet（核心杀手锏）**：<br>    -   可以精确控制人物的**姿势**（OpenPose）、**线稿**（Canny/Lineart）、**深度信息**（Depth）、**语义分割**（Segmentation）。<br>    -   这是 SD 区别于其他 AI 绘画工具的最大优势，让“指哪打哪”成为可能。<br>4.  **LoRA (Low-Rank Adaptation)**：<br>    -   一种轻量级微调技术。用户可以训练特定的人物脸型、画风、服装或物体，文件通常只有几十到几百 MB，加载后可改变生成风格。<br>5.  **Inpainting / Outpainting**：<br>    -   **局部重绘**：修改图片中的特定区域（如换衣服、换表情）。<br>    -   **扩图**：将图片向四周扩展，补全画面。<br>6.  **模型融合 (Checkpoint Merge)**：将两个不同风格的模型合并，创造出新的混合风格。<br><br>### 4. 优缺点<br><br>**优点：**<br>- **完全免费且开源**：软件本身免费，无使用次数限制。<br>- **隐私安全**：本地运行，数据不上传云端（除非你使用在线服务）。<br>- **自由度极高**：通过 ControlNet 和 LoRA，可以实现商业级精确控制。<br>- **社区生态极强**：Civitai（C站）等平台上有海量免费模型和插件。<br>- **可离线运行**：断网也能用。<br><br>**缺点：**<br>- **硬件门槛高**：本地流畅运行通常需要 **NVIDIA 显卡（建议 8GB 显存以上）**，Mac 用户或低配电脑体验较差。<br>- **学习曲线陡峭**：需要理解采样器、步数、CFG、Denoise 等参数，新手容易懵。<br>- **出图质量不稳定**：默认模型（Base Model）出图可能不如 Midjourney 惊艳，需要配合好的模型和提示词。<br>- **上手繁琐**：安装 Python、Git、配置环境对非技术人员不友好（虽然现在有整合包）。<br><br>### 5. 怎么开始用？<br><br>根据你的技术背景和设备，有三种主要路径：<br><br>**路径 A：本地部署（推荐给有 N 卡的用户）**<br>1.  **硬件检查**：确认显卡是 NVIDIA，显存 ≥ 6GB（4GB 可勉强运行但很慢）。<br>2.  **下载整合包**：推荐使用 **B站秋叶的整合包** 或 **Stability Matrix**。这些工具一键解压，无需配置环境。<br>3.  **下载模型**：去 **Civitai** 或 **Hugging Face** 下载 `.safetensors` 格式的模型（Checkpoint），放入 `models/Stable-diffusion` 文件夹。<br>4.  **启动 WebUI**：运行启动器，浏览器打开 `127.0.0.1:7860` 即可开始。<br><br>**路径 B：在线云端（推荐给无显卡或新手）**<br>1.  **Google Colab**：免费但有限制，适合尝鲜。<br>2.  **国内在线平台**：如 **LiblibAI（哩布哩布）**、**吐司 Tiamat**、**海螺 AI** 等。这些平台通常提供在线生成，按算力收费或每日免费额度，无需本地硬件。<br><br>**路径 C：苹果 Mac**<br>1.  可使用 **Draw Things**（App Store 免费下载）或 **DiffusionBee**，对 Apple Silicon 芯片优化较好，但速度慢于 N 卡。<br><br>### 6. 免费还是付费？<br><br>这是一个混合模式：<br><br>- **软件本身**：**完全免费**。Stable Diffusion 的代码和基础模型是开源免费的。<br>- **本地运行**：**免费**。只需支付电费和硬件成本。<br>- **在线服务**：<br>    -   **免费**：部分平台提供每日免费点数（如 LiblibAI 每天送点数）。<br>    -   **付费**：大多数云端平台采用**订阅制**或**算力包**。例如，RunDiffusion、DreamStudio（Stability AI 官方）按生成次数收费。<br>- **模型下载**：绝大多数社区模型（Civitai）**免费**，但部分创作者会设置付费墙（Patreon）或要求打赏。<br>- **商用**：Stable Diffusion 模型本身允许商用（遵循 CreativeML Open RAIL-M 许可证），但**你使用的特定社区模型可能有自己的商用限制**，商用前需查看模型说明。<br><br>### 总结建议<br><br>如果你追求**极致控制**且**有 N 卡**，Stable Diffusion 是唯一选择。<br>如果你**不想折腾**只想**快速出图**，建议先用 **Midjourney** 或 **国内在线 SD 平台**。<br>如果你**想学**，建议从 **B站秋叶整合包** + **
+        </div>
+    </div>
+</body>
+</html>
