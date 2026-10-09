@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midjourney - 详细介绍 | AI Art Tools</title>
+    <title>midjourney - AI绘画工具</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
-        nav a { color: #6b7280; text-decoration: none; }
-        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.8; color: #1a1a2e; }
+        a { color: #0066ff; text-decoration: none; }
+        h1 { margin-bottom: 1rem; }
     </style>
 </head>
 <body>
-    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
-    <div class="container">
-        <h1>Midjourney</h1>
-        <div class="content">
-            # Midjourney 详细介绍<br><br>## 1. 这个工具是什么<br><br>Midjourney 是一款**AI 图像生成工具**，由位于美国旧金山的独立研究实验室 Midjourney, Inc. 开发。用户通过输入一段自然语言描述（称为 **Prompt / 提示词**），AI 就能在几十秒内生成对应的图像。<br><br>它最早于 **2022 年 7 月** 开放公测，凭借出图质量高、艺术感强，迅速成为与 Stable Diffusion、DALL·E 并列的三大主流 AI 绘画工具之一。<br><br>**核心特点：**<br>- 主要运行在 **Discord** 平台上（通过机器人交互），2024 年也推出了独立的网页版 **Midjourney Web**。<br>- 生成风格偏 **艺术化、电影感、插画感**，美学表现是它最强的地方。<br>- 是**闭源商业产品**，模型细节不公开。<br><br>---<br><br>## 2. 适合谁用<br><br>| 人群 | 适用场景 |<br>|------|----------|<br>| **设计师 / 插画师** | 概念草图、灵感参考、素材生成 |<br>| **自媒体 / 内容创作者** | 文章配图、封面、视频素材 |<br>| **游戏 / 影视从业者** | 角色设计、场景概念图 |<br>| **营销 / 广告人员** | 快速产出视觉提案 |<br>| **普通爱好者** | 玩票、做头像、壁纸、个人创作 |<br><br>**不太适合：**<br>- 需要**精确控制构图和细节**的专业生产（如精确排版、PPT、工程图）——这类更适合 Photoshop + Stable Diffusion 组合。<br>- 完全不想学英文提示词、也不想接触 Discord 的用户，上手会有点门槛。<br><br>---<br><br>## 3. 核心功能<br><br>1. **文生图（Text-to-Image）**<br>   输入提示词，直接生成 4 张候选图，可放大或重绘。<br><br>2. **图生图（Image Prompt）**<br>   上传参考图 + 文字描述，让 AI 在参考图基础上生成新图。<br><br>3. **垫图 / 风格参考（Style Reference, sref）**<br>   用一张图定义整体画风，让新图继承该风格。<br><br>4. **角色一致性（Character Reference, cref）**<br>   让同一个角色在不同场景中保持长相一致，适合做漫画、系列图。<br><br>5. **局部重绘（Vary Region / Inpainting）**<br>   对生成图中不满意的一小块区域重新生成，而不是整张重做。<br><br>6. **放大与细节增强（Upscale）**<br>   把图放大到更高分辨率，同时补充细节。<br><br>7. **参数控制**<br>   - `--ar 16:9`：控制宽高比<br>   - `--stylize`：控制艺术化程度<br>   - `--chaos`：控制生成多样性<br>   - `--v 6` / `--v 7`：指定模型版本<br>   - `--no xxx`：排除某元素<br><br>8. **网页版编辑器（Midjourney Web）**<br>   提供更友好的界面，可在网页上直接生成、编辑、管理作品。<br><br>---<br><br>## 4. 优缺点<br><br>### ✅ 优点<br>- **出图美学天花板**：默认风格就很"高级"，出片率高。<br>- **上手相对简单**：不用本地部署、不用显卡，浏览器/Discord 就能用。<br>- **社区活跃**：Discord 上有大量公开作品和提示词可参考。<br>- **持续迭代快**：模型版本更新频繁（V4 → V5 → V6 → V7），效果不断提升。<br>- **角色/风格一致性功能强**：cref、sref 等功能对做系列内容很实用。<br><br>### ❌ 缺点<br>- **必须联网、依赖平台**：不能本地运行，断网即停。<br>- **Discord 门槛**：新手一开始容易被复杂的 Discord 界面劝退。<br>- **提示词偏英文**：中文提示词效果不如英文稳定。<br>- **精确控制弱**：很难做到"第 3 排第 2 个按钮改成红色"这种精细操作。<br>- **版权与商用有争议**：生成图的版权归属、商用授权在各地法律尚不明确。<br>- **免费额度极少**：基本等于付费工具。<br>- **对文字生成差**：图里写中文/英文长句经常出错（V6 后略有改善）。<br><br>---<br><br>## 5. 怎么开始用<br><br>**步骤一：注册账号**<br>- 访问 midjourney.com，用 Google 或 Discord 账号登录。<br><br>**步骤二：选择使用方式**<br>- **方式 A（推荐新手）**：直接用 **Midjourney 网页版**，界面友好，像普通 AI 工具一样输入框打字即可。<br>- **方式 B（传统方式）**：加入 Midjourney 官方 Discord 服务器，在 `#newbies` 频道里用 `/imagine` 命令生成。<br><br>**步骤三：写提示词**<br>例如：<br>```<br>a cyberpunk cat wearing sunglasses, neon city background, cinematic lighting, ultra detailed --ar 16:9 --v 6<br>```<br><br>**步骤四：筛选与优化**<br>- 从 4 张里选一张放大（U1–U4）<br>- 或让 AI 基于某张再生成变体（V1–V4）<br>- 不满意就用 Vary Region 局部重绘<br><br>**步骤五：保存与使用**<br>- 下载图片，按需使用（注意商用条款）。<br><br>---<br><br>## 6. 免费还是付费<br><br>**基本是付费工具，免费额度极少。**<br><br>| 套餐 | 价格（约） | 内容 |<br>|------|-----------|------|<br>| **Basic** | $10/月 | 约 200 张快速生成 |<br>| **Standard** | $30/月 | 15 小时快速 + 无限 Relax 模式 |<br>| **Pro** | $60/月 | 30 小时快速 + 隐身模式 |<br>| **Mega** | $120/月 | 60 小时快速，适合团队/重度用户 |<br><br>**要点：**<br>- 早期有免费试用，但**现已基本取消**，新用户需付费才能生成。<br>- 年付通常有折扣（约 8 折）。<br>- "Relax 模式"是排队生成、速度慢但不计时，适合不着急的用户。<br>- 学生、非营利组织偶有优惠活动，需关注官网。<br><br>---<br><br>## 总结一句话<br><br>**Midjourney 是目前"出图最美、最容易出片"的 AI 绘画工具之一，适合追求视觉质感的创作者；但它不擅长精确控制，且是付费闭源产品，用之前要清楚它的定位。**
-        </div>
-    </div>
+    <a href="../">← 返回首页</a>
+    <h1>midjourney</h1>
+    <p>内容生成中... Expecting value: line 1 column 1 (char 0)</p>
 </body>
 </html>

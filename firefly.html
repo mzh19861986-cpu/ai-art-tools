@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firefly - 详细介绍 | AI Art Tools</title>
+    <title>firefly - AI绘画工具</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
-        nav a { color: #6b7280; text-decoration: none; }
-        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.8; color: #1a1a2e; }
+        a { color: #0066ff; text-decoration: none; }
+        h1 { margin-bottom: 1rem; }
     </style>
 </head>
 <body>
-    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
-    <div class="container">
-        <h1>Firefly</h1>
-        <div class="content">
-            # Firefly 详细介绍：Adobe 的 AI 绘画工具<br><br>## 1. 这个工具是什么<br><br>Firefly 是 **Adobe 公司推出的生成式 AI 工具系列**，于 2023 年 3 月首次发布。它不是一个独立产品，而是深度集成在 Adobe 全家桶（Photoshop、Illustrator、Express、Premiere Pro 等）中的 AI 能力集合，同时也提供网页版独立使用（firefly.adobe.com）。<br><br>在 AI 绘画领域，Firefly 的核心定位是"**商用安全的生成式 AI**"——它的训练数据全部来自 Adobe Stock 图库、公开授权内容和版权已过期的公共领域作品，因此生成的图像在法律上可用于商业用途（这是它区别于 Midjourney、Stable Diffusion 的最大卖点）。<br><br>底层模型方面，Firefly 最初基于 Adobe 自研的扩散模型，2024 年后陆续接入了第三方模型（如 Google Imagen、OpenAI 的部分能力），形成"多模型"策略。<br><br>---<br><br>## 2. 适合谁用<br><br>**最适合：**<br>- **商业设计师 / 广告从业者**：需要生成可商用素材，规避版权风险<br>- **Adobe 全家桶用户**：Photoshop、Illustrator 重度用户，可直接在工作流中调用<br>- **电商 / 营销人员**：快速生成产品图背景、banner、社交媒体配图<br>- **企业团队**：对合规性要求高，需要"法律上干净"的 AI 内容<br><br>**不太适合：**<br>- 追求极致艺术性、画面张力的创作者（Midjourney 更强）<br>- 想要精细控制、玩 LoRA/ControlNet 的高级玩家（Stable Diffusion 更合适）<br>- 预算敏感的个人用户（免费额度有限）<br><br>---<br><br>## 3. 核心功能<br><br>| 功能 | 说明 |<br>|------|------|<br>| **文生图（Text to Image）** | 输入提示词生成图像，支持风格、比例、光照等参数 |<br>| **生成式填充（Generative Fill）** | PS 中的杀手锏：框选区域，输入描述即可增删改内容 |<br>| **生成式扩展（Generative Expand）** | 一键扩展画布，AI 自动补全边缘内容 |<br>| **文字效果（Text Effects）** | 输入文字 + 描述，生成带材质/风格的艺术字 |<br>| **矢量生成（Vector Recolor / Generate Vector）** | 生成可编辑的 SVG 矢量图，Illustrator 中可用 |<br>| **生成式重新着色** | 上传矢量图，AI 自动配色 |<br>| **草稿到图像（Sketch to Image）** | 手绘草图转成完整画面 |<br>| **视频/音频相关** | Premiere 中的生成式扩展、音频降噪等 |<br><br>---<br><br>## 4. 优缺点<br><br>**优点：**<br>- ✅ **商用安全**：训练数据合规，企业可放心使用<br>- ✅ **Adobe 生态整合**：与 PS、AI 无缝衔接，工作流顺滑<br>- ✅ **生成式填充体验极佳**：在 PS 中修图效率远超传统方法<br>- ✅ **界面友好**：中文支持好，学习成本低<br>- ✅ **矢量生成能力**：少有的能生成可编辑矢量图的工具<br><br>**缺点：**<br>- ❌ **画质上限不如 Midjourney**：艺术感、细节、光影表现偏保守<br>- ❌ **免费额度紧张**：每月只有少量生成积分<br>- ❌ **提示词理解一般**：复杂场景容易跑偏<br>- ❌ **社区/生态弱**：没有 Civitai 那样的模型分享社区<br>- ❌ **地区限制**：部分功能在中国大陆访问受限，需要海外账号<br>- ❌ **依赖网络**：纯云端，无本地部署选项<br><br>---<br><br>## 5. 怎么开始用<br><br>**方式一：网页版（最快上手）**<br>1. 访问 firefly.adobe.com<br>2. 用 Adobe ID 登录（没有就注册，需海外邮箱更稳妥）<br>3. 选择 "Text to Image"，输入提示词即可生成<br>4. 每月免费额度用完后需订阅<br><br>**方式二：Photoshop 内使用（推荐设计师）**<br>1. 安装 Photoshop 2024 或更新版本<br>2. 打开图像 → 用套索工具框选区域<br>3. 点击浮动工具栏的"生成式填充"<br>4. 输入描述 → 点击"生成"，会消耗积分<br><br>**方式三：Illustrator / Express**<br>- Illustrator 中用"文字转矢量图"<br>- Express 中直接调用 Firefly 生成社媒素材<br><br>**提示词小建议**：Firefly 对"主体 + 风格 + 光线 + 构图"这样的结构化描述响应更好，例如 *"a ceramic coffee cup, minimalist style, soft morning light, top view, white background"*。<br><br>---<br><br>## 6. 免费还是付费<br><br>**免费版（Adobe Firefly 免费计划）：**<br>- 每月 **25 个生成积分**（1 张图约 1 积分）<br>- 可使用文生图、生成式填充等基础功能<br>- 生成内容可商用<br>- 有水印选项（可关闭）<br><br>**付费版：**<br>- **Firefly 独立订阅**：约 **4.99 美元/月**，含 100 积分/月<br>- **Creative Cloud 全家桶**：约 **59.99 美元/月起**，含 Firefly 积分和全部 Adobe 应用<br>- **企业版**：按席位计费，含更多积分和版权赔偿保障<br><br>**积分规则**：不同功能消耗不同，例如生成式填充约 1 积分/次，视频生成消耗更多。积分每月重置，不累积。<br><br>---<br><br>## 总结<br><br>Firefly 不是"最强的 AI 绘画工具"，但它是**最"敢商用"的 AI 绘画工具**。如果你是企业用户、Adobe 生态用户，或者需要生成能合法用于商业项目的内容，Firefly 是首选；如果你追求艺术表现力或想深度定制模型，Midjourney 和 Stable Diffusion 会更合适。把 Firefly 当作"Adobe 工作流里的 AI 助手"，而不是"独立的绘画神器"，预期会更准确。
-        </div>
-    </div>
+    <a href="../">← 返回首页</a>
+    <h1>firefly</h1>
+    <p>内容生成中... Expecting value: line 1 column 1 (char 0)</p>
 </body>
 </html>
